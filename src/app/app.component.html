@@ -1,0 +1,17 @@
+<ion-app>
+  <ion-router-outlet></ion-router-outlet>
+</ion-app>
+
+<ion-tabs>
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button routerLinkActive="tab-selected" routerLink="/home" class="ios" tab="home">
+      <ion-icon name="reader"></ion-icon>
+      <ion-label>view all</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button routerLinkActive="tab-selected" routerLink="/add-item" class="ios" tab="add-item">
+      <ion-icon style="background-color: #4b4b74; border-radius: 50%;" name="add-circle"></ion-icon>
+      <ion-label>Add Item</ion-label>
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-tabs>

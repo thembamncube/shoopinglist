@@ -1,0 +1,42 @@
+<!-- <ion-header>
+  <ion-toolbar color="navyblue">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Add Item</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+<div class="top"> <h4>Add product</h4></div>
+<ion-content style="background-color: black;">
+
+  <div class="container">
+    <form [formGroup]="itemForm" (submit)="create_Product()">
+
+      <ion-item>
+        <ion-label position="floating">Product Name</ion-label>
+        <ion-input type="text" formControlName="name"></ion-input>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label>Product Image</ion-label>
+        <ion-input style="font-size: 10px;" type="file" formControlName="imgUrl" accept="image/*" (change)="onFileSelected($event)"></ion-input>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label position="floating">Product Price</ion-label><br>
+        <ion-input type="number" formControlName="price"></ion-input>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label position="floating">Description</ion-label>
+        <ion-input type="text" formControlName="description"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-button style="--background: #0A0A2A ;" expand="block" (click)="create_Product()">Add Item</ion-button>
+      </ion-item>
+  
+    </form>
+  </div> 
+
+</ion-content>

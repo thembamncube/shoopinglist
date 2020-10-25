@@ -1,0 +1,25 @@
+
+<div class="top"> <h4>Product Display</h4></div>
+<div class="down"></div>
+<ion-content>
+  <!--  grid view -->
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12" *ngFor="let list of items | async" [routerLink]="'/view-item/'+list.id" class="product">
+          <img src="{{list.imgUrl}}" > 
+        <ion-item lines="none">
+          <ion-label>
+            <h2 class="name" style="color: #0A0A2A;">
+              {{list.name}}
+            </h2>
+            <p style="color: rgba(201, 38, 38, 0.486);">
+              Price: {{list.price | currency: 'ZAR'}}
+            </p>
+          </ion-label>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>
+      
